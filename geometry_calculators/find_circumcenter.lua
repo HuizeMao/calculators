@@ -8,7 +8,7 @@ x2 = io.read("*n")
 io.write("input y2: ")
 y2 = io.read("*n")
 io.write("input x3: ")
-x3 = io.read("*n")
+x3 = io.read("*n")  
 io.write("input y3: ")
 y3 = io.read("*n")
 --couple of functions which find midpt, slope.
