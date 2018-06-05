@@ -1,0 +1,12 @@
+io.write("what is x1: ")
+x1 = io.read("*n")
+io.write("what is y1: ")
+y1 = io.read("*n")
+io.write("what is x2: ")
+x2 = io.read("*n")
+io.write("what is y2: ")
+y2 = io.read("*n")
+x = ((x1+x2)/2)
+y = ((y1+y2)/2)
+print("("..x..","..y..")")
+
