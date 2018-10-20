@@ -1,11 +1,14 @@
+import cmath
 from math import sqrt
-quadratic_formula_question_b = float((input("enter b of quadratic formula in order to solve quadratic formula ")))
-quadratic_formula_question_c = float((input("enter c of quadratic formula in order to solve quadratic formula ")))
-quadratic_formula_question_a = float((input("enter a of quadratic formula in order to solve quadratic formula ")))
+a = float(input("enter a of the quadratic function: "))
+b = float(input("enter b of the quadratic function: "))
+c = float(input("enter c of the quadratic function: "))
 
-def quadratic(b,a,c):
-  x1 = (-b + sqrt(b**2 - 4*a*c)) / (2 * a)
-  x2 = (-b - sqrt(b**2 - 4*a*c)) / (2 * a)
-  return (x1,x2)
+firstTerm = -b/(2*a)
+DiscriminantTerm = cmath.sqrt(b**2 - 4*a*c)/(2*a)
+x1 = firstTerm + DiscriminantTerm
+x2 = firstTerm - DiscriminantTerm
+x1 = round(x1.real,3) + round(x1.imag,5) * 1j
+x2 = round(x2.real,3) + round(x2.imag,5) * 1j
 
-print (quadratic(quadratic_formula_question_b, quadratic_formula_question_a, quadratic_formula_question_c))
+print("Rounded results: x1: {} x2: {}".format(x1,x2))
